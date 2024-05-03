@@ -26,11 +26,13 @@ namespace aNIS
         {
             try
             {
+                //отправляем запрос на свой сервер, чтобы получить оценки
                 using (var client = new HttpClient())
                 {
                     string url = $"http://localhost:8080/grades?token={token}&id={gid}";
                     var response = await client.GetAsync(url);
 
+                    //если все успешно сохранить оценки 
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
@@ -55,6 +57,7 @@ namespace aNIS
         private void button1_Click(object sender, EventArgs e)
         {
             int n;
+            //смотрим на настройки подсчета ГПА
             if (radioButton1.Checked)
             {
                 n = 2;
@@ -68,8 +71,10 @@ namespace aNIS
             }
             int k = 0;
             double sum = 0;
+            //проходимся по оценкам за года
             for (int i = yearGrades.Length - 1; i >= 0; i--)
             {
+                //если еще не выставили- пропускаем и уменьшаем количество подсчитывающих годов
                 if (yearGrades[i].Contains("0.00"))
                 {
                     if (n == yearGrades.Length)
@@ -83,11 +88,16 @@ namespace aNIS
                 {
                     break;
                 }
+
                 k++;
+                
+                //Берем ГПА из текста типа "Оценка за 2023 год: 4.00"
                 string lfd = yearGrades[i].Substring(yearGrades[i].Length - 4);
+                //добавляем в переменную суммы
                 sum += double.Parse(lfd.Replace(".", ","));
             }
             
+            //выводим гпа
             label3.Text = "Last "+n.ToString()+" years: " + (sum/n).ToString();
         }
 

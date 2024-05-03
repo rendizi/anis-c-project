@@ -23,6 +23,7 @@ namespace aNIS
 
         private async void fetch(string token)
         {
+            //кидаем запрос на свой сервер, чтобы получить информацию о студенте
             try
             {
                 using (var client = new HttpClient())
@@ -30,6 +31,7 @@ namespace aNIS
                     string url = $"http://localhost:8080/add?token={token}";
                     var response = await client.GetAsync(url);
 
+                    //если успешно то сохраняем о нем информацию
                     if (response.IsSuccessStatusCode)
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();

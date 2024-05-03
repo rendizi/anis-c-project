@@ -23,6 +23,7 @@ namespace aNIS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //берем только часть после b2a.kz/
             string longUrl = textBox1.Text;
             if (longUrl.StartsWith("https://"))
             {
@@ -40,6 +41,7 @@ namespace aNIS
         {
             try
             {
+                //отправляем запрос на свой сервер для проверки на вирус
                 using (var client = new HttpClient())
                 {
                     string url = $"http://localhost:8080/virus?url={longUrl}";
@@ -49,6 +51,7 @@ namespace aNIS
                     {
                         string responseBody = await response.Content.ReadAsStringAsync();
                         Console.WriteLine(responseBody);
+                        //Если он вернет ссылку, то делаем линклэйбл, иначе просто показываем результат антивирусов
                         if (responseBody.StartsWith("https://"))
                         {
                             link = responseBody;
