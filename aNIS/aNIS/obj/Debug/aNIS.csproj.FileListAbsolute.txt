@@ -1,0 +1,13 @@
+C:\Users\rendi\RiderProjects\aNIS\aNIS\bin\Debug\aNIS.exe.config
+C:\Users\rendi\RiderProjects\aNIS\aNIS\bin\Debug\aNIS.exe
+C:\Users\rendi\RiderProjects\aNIS\aNIS\bin\Debug\aNIS.pdb
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.csproj.AssemblyReference.cache
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.Properties.Resources.resources
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.csproj.GenerateResource.cache
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.csproj.CoreCompileInputs.cache
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.exe
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.pdb
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.Form1.resources
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.home.resources
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.GPA.resources
+C:\Users\rendi\RiderProjects\aNIS\aNIS\obj\Debug\aNIS.b2a.resources
